@@ -9,7 +9,7 @@
     float: left;
     width: 100%;
     height: 100%;
-    background: url("../load-lf-bg.gif") no-repeat center center;
+    background: url("../img/load-lf-bg.gif") no-repeat center center;
     background-size: cover;
     -webkit-transition:all 1s linear;
     transition:all 1s linear;
@@ -99,12 +99,12 @@
 /* page1 */
 
 .lround-gif {
-    background: url("../irround-left.gif") no-repeat center center;
+    background: url("../img/irround-left.gif") no-repeat center center;
     background-size: cover;
 }
 
 .rround-gif {
-    background: url("../irround-right.gif") no-repeat center center;
+    background: url("../img/irround-right.gif") no-repeat center center;
     background-size: cover;
 }
 
@@ -137,11 +137,11 @@
 /*page2 */
 
 .con-page2-lbg {
-    background: url("../brand-bg-left.png") no-repeat center center;
+    background: url("../img/brand-bg-left.png") no-repeat center center;
 }
 
 .con-page2-rbg {
-    background: url("../brand-bg-right.gif") no-repeat center center;
+    background: url("../img/brand-bg-right.gif") no-repeat center center;
 }
 
 .con-bh {
@@ -223,7 +223,7 @@
 }
 
 .con-page3-rbg {
-    background: url("../jnby.gif") no-repeat center center;
+    background: url("../img/jnby.gif") no-repeat center center;
     background-size: cover;
 }
 
@@ -267,7 +267,7 @@
 /*page4*/
 
 .con-page4-lbg {
-    background: url("../croquis.gif") no-repeat center center;
+    background: url("../img/croquis.gif") no-repeat center center;
     background-size: cover;
 }
 
@@ -323,7 +323,7 @@
 }
 
 .con-page5-rbg {
-    background: url("../less1.gif") no-repeat center center;
+    background: url("../img/less.gif") no-repeat center center;
     background-size: cover;
 }
 
@@ -372,7 +372,7 @@
 /*page6*/
 
 .con-page6-lbg {
-    background: url("../jbj1.gif") no-repeat center center;
+    background: url("../img/jbj.gif") no-repeat center center;
     background-size: cover;
 }
 
@@ -429,7 +429,7 @@
 }
 
 .con-page7-rbg {
-    background: url("../pt.gif") no-repeat center center;
+    background: url("../img/pt.gif") no-repeat center center;
     background-size: cover;
 }
 
@@ -478,7 +478,7 @@
 /*page8*/
 
 .con-page8-lbg {
-    background: url("../jnbyhome.gif") no-repeat center center;
+    background: url("../img/jnbyhome.gif") no-repeat center center;
     background-size: cover;
 }
 
@@ -534,7 +534,7 @@
     background:url("../img/global/index/left.png") no-repeat center center;
 }
 .con-page9-rbg{
-    background:url("../right.gif") no-repeat center center;
+    background:url("../img/right.gif") no-repeat center center;
 }
 .con-page9-lbg>p{
     width: 100%;
@@ -1157,7 +1157,7 @@
     background:url("../img/fans/index/lbg.jpg") no-repeat center center;
 }
 .con-page13-rbg{
-    background:url("../rbg.gif") no-repeat center center;
+    background:url("../img/rbg.gif") no-repeat center center;
 }
 .con-page13-lbg>p,
 .con-page13-rbg>p{
@@ -2786,7 +2786,7 @@
     background: url('../img/finacial/index/lbg.png') no-repeat center center;
 }
 .page22-rbg{
-    background: url('../rbg1.gif') no-repeat center center;
+    background: url('../img/rbg1.gif') no-repeat center center;
 }
 .page22-lbg>p,
 .page22-rbg>p{

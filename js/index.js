@@ -31,7 +31,7 @@ $(function(){
 	        var t = this;
 	        if (t.imgs.length) {
 				var img = new Image();
-				img.src ='./' + t.imgs.shift();
+				img.src ='./img/' + t.imgs.shift();
 	            img.onload = function() {
 	                var imgProg = t.imgs.length / t.len;
 	                D.loadBg.css('height', t.imgs.length * (1 / t.len * height) );
