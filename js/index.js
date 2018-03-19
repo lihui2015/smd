@@ -1,60 +1,84 @@
 $(function(){
 	var D = {
-		loadBg: $('.con-ld-gif'),
-		process : $('.process'),
+		loadBg: $('.loadBg'),
+		colorInc: 100 / 3,
 	    main : $('.main')
 	};
 	var i = 0;
     var height = $(window).height();
 	var load = {
 	    imgs: [
-			'irround-left.gif',
-	        'irround-right.gif',
-			
-			'load-lf-bg.gif',
-			
-	        'brand-bg-left.png',
-	        'brand-bg-right.gif',
-	        'jnby.gif',
-	        'right.gif',
-	        'croquis.gif',
-	        'jbj.gif',
-	        'jnbyhome.gif',
-	        'less.gif',
-	        'pt.gif',
-			
-	        'rbg.gif',
-	        'rbg1.gif',
+	    	'1@2x.jpg',
+	    	'2@2x.jpg',
+	    	'3@2x.jpg',
+	    	'4@2x.jpg',
+	    	'7@2x.jpg',
+	    	'8@2x.jpg',
+	    	'9@2x.jpg',
+	    	'10@2x.jpg',
+	    	'11@2x.jpg',
+	    	'12@2x.jpg',
+	    	'13@2x.jpg',
+	    	'14@2x.jpg',
+	    	'15@2x.jpg',
+	    	'16@2x.jpg',
+	    	'17@2x.jpg',
+	    	'18@2x.jpg',
+	    	'19@2x.jpg',
+	    	'20@2x.jpg',
+	    	'21@2x.jpg',
+	    	'23@2x.jpg',
 	    ],
 	    len : 0,
 	    preLoadImg: function() { //图片预先加载
 	        var t = this;
 	        if (t.imgs.length) {
 				var img = new Image();
-				img.src ='./img/' + t.imgs.shift();
+				img.src ='./images/' + t.imgs.shift();
 	            img.onload = function() {
 	                var imgProg = t.imgs.length / t.len;
-	                D.loadBg.css('height', t.imgs.length * (1 / t.len * height) );
+	                var percent = Math.ceil( (t.len - t.imgs.length) / t.len * 100);
+	                t.updatePercent(percent);
 	        		time([500],[
 						function(){
-							D.process.text( Math.ceil( (t.len - t.imgs.length) / t.len * 100) + '%' );
-	        				t.preLoadImg();
+							t.preLoadImg();
 	        			}
         			]);
 				 };
 	        }else{
 		       	D.main.attr('src','default.html');
-		       	time([1000, 1000],[
+		       	time([500, 2000],[
 	       			function(){
-						D.main.show();
 	       				D.loadBg.parents('.page0').addClass('active');
+	       				D.main.show();
 					},
 					function(){
 						D.loadBg.parents('.page0').remove();
 						autoPlay(document.getElementById('audio'));
+	       				
 	       			}
 	       		],true);
 	        };
+	    },
+	    updatePercent: function(val){
+	    	var valOrig = val;
+			      val = 100 - val;
+			      
+			      if(valOrig == 0)
+			      {
+			        $(".progress .percent").text(0 + "%");
+			      }
+			      else $(".progress .percent").text(valOrig + "%");
+			      
+			      $(".progress").parent().removeClass();
+			      $(".progress .water").css("top", val + "%");
+			      
+			      if(valOrig < D.colorInc * 1)
+			        $(".progress").parent().addClass("color-red");
+			      else if(valOrig < D.colorInc * 2)
+			        $(".progress").parent().addClass("color-orange");
+			      else
+			        $(".progress").parent().addClass("color-green");
 	    },
 	    init: function() {
 	        this.len = this.imgs.length;
@@ -83,8 +107,7 @@ $(function(){
 	function init() {
 		setTimeout(function(){
 			load.init(); // 必要图片预加载
-			D.process.addClass('active');
-		},3000);
+		},300);
 		autoPlay(document.getElementById('audio'));
 	};
 	var timer = setInterval(function(){
